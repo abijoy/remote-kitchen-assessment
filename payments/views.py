@@ -34,7 +34,7 @@ class CreateCheckoutSession(APIView):
         
         # print(order_obj.ordereditems.all())
 
-        total = sum([float(ordered_item.item.price) for ordered_item in order_obj.ordereditems.all()])
+        total = sum([float(ordered_item.item.price) * int(ordered_item.quantity) for ordered_item in order_obj.ordereditems.all()])
 
         try:
             stripe.api_key = settings.STRIPE_SECRET_KEY
