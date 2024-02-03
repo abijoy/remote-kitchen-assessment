@@ -138,7 +138,7 @@ AUTH_USER_MODEL = 'users.CustomUser'
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 WEBHOOK_ENDPOINT_SECRET_KEY = os.environ.get("WEBHOOK_ENDPOINT_SECRET_KEY")
 
-PAYMENT_SUCCESS_URL = 'http://127.0.0.1:8000/payments/success/'
+PAYMENT_SUCCESS_URL = 'http://127.0.0.1:8000/api/v1/payments/success/'
 
 CHECKOUT_SUCCESS_URL = ''
 CHECKOUT_FAILED_URL = ''
