@@ -163,6 +163,13 @@ Endpoint: `DELETE /api/v1/orders/{pk}/` : Delete the order
 
 ## Payment API
 
+### Steps to setup Stripe:
+* Sign Up for Stripe and get your secrect key and put it in .env
+* install stripe-cli to get stripe webhook working in local environment
+* collect webhook secret key and put it into .env
+* for more information: https://dashboard.stripe.com/test/webhooks/create?endpoint_location=local
+
+
 ### Create a new Payment
 
 Endpoint: `POST /api/v1/payments/create/`: Create new order
