@@ -56,7 +56,8 @@ class MenuPermission(permissions.BasePermission):
 
     def has_object_permission(self, request, view, obj):
         print('### Menu object permisssion #####')
-        return request.user == obj.restaurant.owner
+        menu = get_object_or_404(Menu, id=view.kwargs['menu_id'])
+        return request.user == menu.restaurant.owner
 
 
 class ItemPermission(permissions.BasePermission):
