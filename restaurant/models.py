@@ -16,6 +16,7 @@ class Menu(TimestampMixin):
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='menus')
+    location = models.CharField(max_length=200, null=True, blank=True, default='')
 
     def __str__(self):
         return f'{self.id } - {self.title} - {self.restaurant}'

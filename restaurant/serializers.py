@@ -5,7 +5,8 @@ from .models import Restaurant, Menu, Item
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
-        fields = ['id', 'name', 'employees']
+        fields = ['id', 'name', 'employees', 'owner']
+        read_only_fields = ('id', 'owner')
 
 
 class MenuSerializer(serializers.ModelSerializer):
