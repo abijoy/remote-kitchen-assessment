@@ -1,12 +1,12 @@
-# Restaurant Management API Backend (remote-kitchen)
+# API Backend (remote-kitchen)
 
 ## How to run the project
 
 ### Clone the repository
 
-`https://github.com/abijoy/remote-kitchen.git`
+`https://github.com/abijoy/remote-kitchen-assessment.git`
 
-`cd remote-kitchen`
+`cd remote-kitchen-assessment`
 
 ### Install the required packages
 
